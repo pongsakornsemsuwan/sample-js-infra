@@ -1,1 +1,1 @@
-"# sample-js-infra" 
+# sample-js-infra
