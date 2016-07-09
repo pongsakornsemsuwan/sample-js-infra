@@ -4,10 +4,21 @@
   <!-- <script type="text/javascript" src="/js/calculator.js"></script>
   <script type="text/javascript" src="/js/store.js"></script> -->
 
-  <script type="text/javascript" src="/js/app.bundle.js"></script>
+
 </head>
+
 <body>
   Hello EJS modified
-  <div style="background-color:blue;">bla bla</div>
+  <div style="background-color:blue;">bla bla 3</div>
+  <div id="app"></div>
+
+  <div id="react-target" data-ui-role="content"><%-content %></div>
+
+  
+  <script>
+      window.APP_STATE = <%-context%>;
+  </script>
+
+  <script type="text/javascript" src="/js/app.bundle.js"></script>
 </body>
 </html>

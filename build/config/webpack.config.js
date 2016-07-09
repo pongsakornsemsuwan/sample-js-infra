@@ -5,7 +5,7 @@ const webpack = require("webpack");
 const ROOT = '../../';
 
 const APP_FOLDER = PATH.resolve(__dirname, ROOT, 'app/');
-const APP_ENTRY_FILE = PATH.resolve(__dirname, ROOT, APP_FOLDER, 'client/js/store.js');
+const APP_ENTRY_FILE = PATH.resolve(__dirname, ROOT, APP_FOLDER, 'client/js/client.js');
 
 var webpackConfig = {
     entry: APP_ENTRY_FILE,

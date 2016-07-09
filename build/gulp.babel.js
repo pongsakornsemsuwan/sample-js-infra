@@ -11,10 +11,16 @@ gulp.task('cleanServer', function(){
 });
 
 gulp.task('compile', function () {
-    return gulp.src('app/server/**.js')
+    gulp.src('app/server/**.js')
         .pipe(babel())
         .pipe(gulp.dest('dist/app/server'));
+
+    gulp.src('app/components/**/**.js')
+        .pipe(babel())
+        .pipe(gulp.dest('dist/app/components'));
 });
+
+
 
 gulp.task('copyHtml', function() {
   // copy any html files in source/ to public/
@@ -23,5 +29,5 @@ gulp.task('copyHtml', function() {
 });
 
 gulp.task('watchForBabel', function() {
-  gulp.watch('app/server/*', ['copyHtml','compile']);
+  gulp.watch(['app/server/**','app/components/**'], ['copyHtml','compile']);
 });

@@ -6,3 +6,7 @@ function printSomething(){
 }
 
 printSomething();
+
+window.onload = function(){
+  document.getElementById('app').innerHTML = 'Hello JS';
+}
